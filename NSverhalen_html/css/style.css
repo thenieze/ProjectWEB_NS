@@ -1,0 +1,188 @@
+@font-face {
+    font-family: NS-Sans;
+    src: url("../fonts/nssans__-webfont.ttf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "NS Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+h1 {
+    font-family: "NS Sans", sans-serif;
+    font-weight: 300;
+}
+
+p {
+    color: #fff;
+    float: left;
+    height: 4.375em;
+    margin: 0.5em
+}
+
+/* card css */
+.card {
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.card ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.card ul li {
+    display: inline-block;
+}
+
+.card ul a {
+    color: #fff;
+}
+
+.card ul a img {
+    width:0.9em;
+    margin-top: 1em;
+}
+
+img#chat.chatIcon:active{
+   transform: rotate(0.2turn);
+    
+}
+.card ul a img:active {
+    transform: scale(2);
+}
+
+
+.card ul span {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    font-size: 0.625em;
+    font-weight: 700;
+    font-family: 'NS-Sans';
+    transform: translate(-50%, 0);
+}
+
+/* card wrapper css */
+
+.card .wrapper {
+    background-color: #fff;
+    min-height: 30em;
+    min-width: 20em;
+    position: relative;
+    overflow: hidden; 
+}
+
+/* opmaak tekste voor iphone en tablet*/
+.content {
+    padding-top: 10em;
+}
+
+
+.card,
+article header h3 {
+    margin-top: 0.625em;
+    
+}
+
+.card .wrapper {
+    background-color: #fff;
+    box-shadow: 0 2px 0 0 rgba(7, 7, 33, .15);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.card .wrapper:hover ul span {
+    transform: translate(-50%, -10px);
+    opacity: 1;
+    
+}
+
+.card .header {
+    color: #fff;
+    padding: 1em;
+    
+}
+
+.card .header::before,
+.card .header::after {
+    content: '';
+    display: table;
+}
+
+.card .header::after {
+    clear: both;
+}
+
+.card .header p {
+    float: left;
+    font-size: 0.750em;
+}
+
+.card ul {
+    float: right;
+}
+
+.card ul li {
+    margin: 0 0.313em;
+    position: relative;
+}
+
+.card ul span {
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.card .animation {
+    color: #fff;
+    transform: translateY(8.375em);
+}
+
+.card .title a {
+    color: #fff;
+}
+
+/* Leesverder linkje */
+
+.leesverder {
+    display: block;
+    margin: 2em auto 1em;
+    padding-left: 2em;
+    width: 10em;
+    text-align: center;
+    font-size: 0.750em;
+    color: #fff;
+    line-height: 1;
+    font-weight: 700;
+}
+
+/* Micro interaction fa fa-heart*/
+
+
+/* Achtergrond cards*/
+.card .item-1 {
+    background: url(../images/card-achtergrond-paranoia.png) center/cover no-repeat;
+}
+
+.card .item-2 {
+    background: url(../images/card-achtergrond-beroemd.png) center/cover no-repeat;
+}
+
+.card .item-3 {
+    background: url(../images/card-achtergrond-terugspoelen.png) center/cover no-repeat;
+}
+
+.card .item-4 {
+    background: url(../images/card-achtergrond.png) center/cover no-repeat;
+}

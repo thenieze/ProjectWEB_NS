@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+<title>Registeren</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="css/registerenlogin.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"> <!--stylesheet voor icons -->
+</head>
+
+
+<body>
+<header>
+    <nav>
+      <ul>
+        <li><a href="index.html"><img alt="Logo NS" class="nslogo" src="images/nslogo.svg"></a></li>
+        <li><a href="#"><img alt="search"  src="images/search.svg"></a></li>
+        <li><a href="register.html"><img alt="login"  src="images/inlog.svg"></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+   <h1>Registreren</h1>
+    <form class="achtergrond">
+      <fieldset>
+        <legend>Registeer je hier als je geen account hebt.</legend>
+        <label for="firstname">Voornaan:</label>
+        <input type="text" id="firstname" name="firstname" placeholder="Voornaam" required>
+
+        <label for="lastname">Achternaam:</label>
+        <input type="text" id="lastname" name="lastname" placeholder="Achternaam" required>
+
+        <label for="username">Gebruikersnaam:</label>
+        <input type="text" name="username" id="username" placeholder="Gebruikersnaam" required>
+
+        <label for="password">Wachtwoord:</label>
+        <input type="password" name="password" id="password" placeholder="Wachtwoord" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="gegevens@email.nl" required>
+      <button id="registeren">Registreer<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+      </fieldset>
+      
+     <a href="login.html" class="login">Al een account? Klik hier om in te loggen</a>
+    </form>
+
+  </main>
+     <footer>© 2018 Nederlandse Spoorwegen.</footer>
+</body>
+</html>
