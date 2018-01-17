@@ -1,6 +1,6 @@
 # ProjectWEB_NS
 
-In blok WEB gaan we ons focussen op het 
+In blok WEB hebben we ons focussen op het 
 ontwerpen en maken van een website om 
 online verhalen te kunnen lezen. De website is 
 responsive en bezoekers moeten verhalen kunnen 
