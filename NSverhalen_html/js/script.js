@@ -9,68 +9,67 @@ if (time < 12) {
 } else if (time < 17) {
     greeting = "Goedemiddag, Wat ga jij lezen vandaag?";
 } else {
-    greeting = "Goedeavond, Wat ga jij lezen vandaag?";
+    greeting = "Goedenavond, Wat ga jij lezen vandaag?";
 }
-
 
 // Deze code haalt de 'element' ID uit de html code en vervangt deze in HTML met een andere inhoud.
-document.querySelector('#demo').innerHTML = greeting;
-
-
-/* microinteractie heart adhv lampje opdracht vorig jaar */
-var IconAan = "bulb";
-var imgSource = document.querySelector('#bulb').src;
-
-
-function showResult() {
-    if (IconAan === 'bulboff'){
-    	IconAan = "bulb";
- 
-    document.querySelector('#bulb').src="images/heart.svg";
-     console.log("uit");
-    } else if (IconAan === 'bulb') {
-    	IconAan = "bulboff";
-        document.querySelector('#bulb').src="images/favorite-heart-button.svg";
-        console.log("aan");
-    }
-}
-
-document.querySelector('#bulb').addEventListener('click', showResult, false);
-
-
-/* microinteractie chat */
-var aan = "chat";
-var imgSource = document.querySelector('#chat').src;
-
-
-function chatIcon() {
-    if (aan == 'chatoff'){
-    	aan = "chat";
-document.querySelector('#chat').src="images/chat.svg";
-    console.log("uit");
-    } 
-    else if (aan == 'chat') {
-    	aan = "chatoff";
-document.querySelector('#chat').src="images/chatfull.svg";
-console.log("aan");
-    }
-}
-
-document.querySelector('#chat').addEventListener('click', chatIcon, false);
-
-
+document.querySelector("#demo").innerHTML = greeting;
 
 //micro loadinbar https://www.w3schools.com/howto/howto_js_progressbar.asp
-function move(){
+function move() {
     var elem = document.querySelector("#loadingbar-inner");
-var width = 1;
+    var width = 1;
     var id = setInterval(frame, 10);
+
     function frame() {
         if (width >= 100) {
             clearInterval(id);
         } else {
-            width++; 
-            elem.style.width = width + '%'; 
+            width++;
+            elem.style.width = width + "%";
         }
     }
 }
+
+console.log("ff testen");
+// FAVORIET
+var likeButton = document.querySelector(".likeIcon");
+
+
+console.log(likeButton);
+
+//actie !
+likeButton.addEventListener("click", function () {
+    console.log("klikkie");
+    likeButton.classList.toggle("liked");
+    document.getElementById("score").innerHTML = "14";
+});
+
+
+// COMMENT
+var commentButton = document.querySelector(".chatIcon");
+console.log(commentButton);
+
+//actie !
+commentButton.addEventListener("click", function () {
+    console.log("comment click");
+    commentButton.classList.toggle("commented");
+    document.getElementById("commentCheck").innerHTML = "3";
+});
+
+
+// DOWNLOAD
+
+var downloadButton = document.querySelector(".downloadicon");
+var button = document.querySelector(".menuDownloadicon");
+
+console.log(downloadButton);
+
+//actie !
+downloadButton.addEventListener("click", function () {
+    console.log("klik!");
+    downloadButton.classList.toggle("downloaded");
+    button.classList.toggle("menuDownload");
+    console.log("download succes");
+    document.getElementById("toegevoegd").innerHTML = "3";
+});

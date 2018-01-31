@@ -1,54 +1,47 @@
 <!DOCTYPE html>
 <html lang="nl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"> <!--stylesheet voor icons -->
 
-  <title>NS | 99 verhalen</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <!--stylesheet voor icons -->
+
+    <title>NS | 99 verhalen</title>
 </head>
 
 <body>
- <header>
-    <nav>
-      <ul>
-        <li><a href="index.html"><img alt="Logo NS" class="nslogo" src="images/nslogo.svg"></a></li>
-        <li><a href="#"><img alt="search"  src="images/search.svg"></a></li>
-        <li><a href="register.html"><img alt="login"  src="images/inlog.svg"></a></li>
-      </ul>
-    </nav>
-  </header>
-  
-<header class="websiteheader">
-    <h1 id="demo"></h1>
-    <section class="searchfield">
-    <form>
-      <input class="search" type="search" name="zoekinput" placeholder="Zoeken...">
-      <button id="searchSubmit">Zoek<i class="fa fa-angle-right" aria-hidden="true"></i></button>
-    </form></section>
-  </header>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img alt="Logo NS" class="nslogo" src="images/nslogo.svg"></a></li>
+                <li><span>NS | 99 verhalen</span></li>
+                <li><button class="menuDownloadicon"></button></li>
+                <li><a href="register.html"><img alt="login"  src="images/inlog.svg"></a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!-- ff vragen of section nodig is voor sfieldset buiten main.  = addeventlistener
- <form>
-  <fieldset class="trendingnieuw">
-        <legend></legend>
-        <input type="radio" id="trending" name="trendingnieuw" checked>
-        <label  for="trending"><span>Trending</span></label>
-        
-        <input type="radio" id="nieuw" name="trendingnieuw">
-        <label for="nieuw">Nieuw</label> 
-      </fieldset>
- </form> -->
- 
- <section class="loadingbar1"><button class="trendingnieuw" onclick="move()">Trending</button> <button class="trendingnieuw" onclick="move()">Nieuw</button> 
-<div id="loadingbar">
-  <div id="loadingbar-inner"></div>
-</div></section>
- <!--
+    <header class="websiteheader">
+        <h1 id="demo"></h1>
+        <form class="searchfield">
+            <!--<legend>Zoek een verhaal, artiest of genre. </legend> -->
+            <input class="search" type="search" name="zoekinput" placeholder="Zoeken...">
+            <button id="searchSubmit">Zoek  <i class="fa fa-angle-right" aria-hidden="true"></i></button>
+        </form>
+    </header>
+
+    <section class="loadingbar1"><button class="trendingnieuw" onclick="move()">Trending</button> <button class="trendingnieuw" onclick="move()">Nieuw</button>
+        <div id="loadingbar">
+            <div id="loadingbar-inner"></div>
+        </div>
+    </section>
+
+        <!--
  <section>
      <label>
          <span class="titel.trendingnieuw"> Trending</span>
@@ -62,39 +55,39 @@
          <span class="loading-bar"><span class="loading-inner"></span></span>
      </label>
  </section> -->
- 
-  <main>
-<article class="card">
-  <section class="wrapper item-1">
-    <div class="animation">
-      <header class="content">
-        <h3 class="title"><a href="paranoia.html">VERHAAL VAN DE DAG - PARANOIA</a></h3>
-        <p class="text">Ik sluip de bus uit. Kop in de kraag. Ik maak me klein en duw m’n zoon vooruit. Hij slaapt. Eindelijk. </p>
-        <a href="paranoia.html" class="leesverder">Lees verder 	&#62;</a>
-      </header>
-    </div>
 
-     <footer class="header">
-      <p class="date">9 februari 2017,
-        M. Molovich
-      </p>
-      <ul>
-        <li>
-          <a href="#" class="fa fa-bookmark-o"></a>
-        </li>
-        <li><a><img alt="like icon" id="bulb" src="images/heart.svg"><span>18</span></a></li>
-        <li><a><img class="chatIcon" alt="Chat icon" id="chat" src="images/chat.svg"><span>3</span></a></li>
-      </ul>
-    </footer>
-  </section>
-</article>
+    <main>
+        <article class="card">
+            <section class="wrapper item-1">
+                <div class="animation">
+                    <header class="content">
+                        <h3 class="title"><a href="paranoia.html">VERHAAL VAN DE DAG - PARANOIA</a></h3>
+                        <p class="text">Ik sluip de bus uit. Kop in de kraag. Ik maak me klein en duw m’n zoon vooruit. Hij slaapt. Eindelijk. </p>
+                        <a href="paranoia.html" class="leesverder">Lees verder 	&#62;</a>
+                    </header>
+                </div>
+
+                <footer class="header">
+                    <p class="date">9 februari 2017, M. Molovich
+                    </p>
+                    <ul>
+                        <li>
+                            <button class="downloadicon"></button>
+                        </li>
+
+                        <li><span id="score">13</span><button class="likeIcon"></button></li>
+                        <li><span id="commentCheck">2</span><button class="chatIcon"></button></li>
+                    </ul>
+                </footer>
+            </section>
+        </article>
 
 <article class="card">
   <section class="wrapper item-2">
     <div class="animation">
       <header class="content">
         <h3 class="title"><a href="beroemd.html">BEROEMD</a></h3>
-        <p class="text">Ik sluip de bus uit. Kop in de kraag. Ik maak me klein en duw m’n zoon vooruit. Hij slaapt. Eindelijk. </p>
+        <p class="text">Vlak voordat ik de bus uitstap bedank ik de buschauffeur via de spiegel voor zijn diensten.</p>
         <a href="beroemd.html" class="leesverder">Lees verder 	&#62;</a>
       </header>
     </div>
@@ -103,24 +96,24 @@
       <p class="date">9 februari 2017,
         M. Molovich
       </p>
-      <ul>
-        <li>
-          <a href="#" class="fa fa-bookmark-o"></a>
-        </li>
-        <li><a><img alt="like icon" src="images/heart.svg"><span>18</span></a></li>
-        <li><a href="#" class="fa fa-comment-o"><span>3</span></a></li>
-      </ul>
+                         <ul>
+                        <li>
+                            <button class="downloadicon"></button>
+                        </li>
+
+                        <li><span>13</span><button class="likeIcon"></button></li>
+                        <li><span>2</span><button class="chatIcon"></button></li>
+                    </ul>
     </footer>
   </section>
 </article>
-
 
 <article class="card">
   <section class="wrapper item-3">
     <div class="animation">
       <header class="content">
         <h3 class="title"><a href="terugspoelen.html">TERUGSPOELEN</a></h3>
-        <p class="text">Ik sluip de bus uit. Kop in de kraag. Ik maak me klein en duw m’n zoon vooruit. Hij slaapt. Eindelijk. </p>
+        <p class="text">In een babywinkel op het Bos en Lommerplein koop ik babyschoentjes. </p>
         <a href="terugspoelen.html" class="leesverder">Lees verder 	&#62;</a>
       </header>
     </div>
@@ -129,13 +122,14 @@
       <p class="date">9 februari 2017,
         M. Molovich
       </p>
-      <ul>
-        <li>
-          <a href="#" class="fa fa-bookmark-o"></a>
-        </li>
-        <li><a><img alt="like icon" src="images/heart.svg"><span>18</span></a></li>
-        <li><a><img alt="Chat icon" src="images/chat.svg"><span>3</span></a></li>
-      </ul>
+                    <ul>
+                        <li>
+                            <button class="downloadicon"></button>
+                        </li>
+
+                        <li><span>13</span><button class="likeIcon"></button></li>
+                        <li><span>2</span><button class="chatIcon"></button></li>
+                    </ul>
     </footer>
   </section>
 </article>
@@ -154,13 +148,14 @@
       <p class="date">9 februari 2017,
         M. Molovich
       </p>
-      <ul>
-        <li>
-          <a href="#" class="fa fa-bookmark-o"></a>
-        </li>
-          <li><a><img alt="like icon"  src="images/heart.svg"><span>18</span></a></li>
-        <li><a href="#" class="fa fa-comment-o"><span>3</span></a></li>
-      </ul>
+                    <ul>
+                        <li>
+                            <button class="downloadicon"></button>
+                        </li>
+
+                        <li><span>13</span><button class="likeIcon"></button></li>
+                        <li><span>2</span><button class="chatIcon"></button></li>
+                    </ul>
     </footer>
   </section>
 </article>
@@ -179,13 +174,14 @@
       <p class="date">9 februari 2017,
         M. Molovich
       </p>
-      <ul>
-        <li>
-          <a href="#" class="fa fa-bookmark-o"></a>
-        </li>
-        <li><a><img alt="like icon"  src="images/heart.svg"><span>18</span></a></li>
-        <li><a href="#" class="fa fa-comment-o"><span>3</span></a></li>
-      </ul>
+                    <ul>
+                        <li>
+                            <button class="downloadicon"></button>
+                        </li>
+
+                        <li><span>13</span><button class="likeIcon"></button></li>
+                        <li><span>2</span><button class="chatIcon"></button></li>
+                    </ul>
     </footer>
   </section>
 </article>
@@ -204,22 +200,22 @@
       <p class="date">9 februari 2017,
         M. Molovich
       </p>
-      <ul>
-        <li>
-          <a href="#" class="fa fa-bookmark-o"></a>
-        </li>
-        <li><a><img alt="like icon"  src="images/heart.svg"><span>18</span></a></li>
-        <li><a href="#" class="fa fa-comment-o"><span>3</span></a></li>
-      </ul>
+                    <ul>
+                        <li>
+                            <button class="downloadicon"></button>
+                        </li>
+
+                        <li><span>13</span><button class="likeIcon"></button></li>
+                        <li><span>2</span><button class="chatIcon"></button></li>
+                    </ul>
     </footer>
   </section>
 </article>
 
 
-
-</main>
-  <footer> © 2018 Nederlandse Spoorwegen.</footer>
-<script type="text/javascript" src="js/script.js"></script>
+    </main>
+    <footer> © 2018 Nederlandse Spoorwegen.</footer>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>

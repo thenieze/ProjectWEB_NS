@@ -34,10 +34,16 @@ nav li {
     margin: 0.3em 0.5em;
     padding: 0;
     display: flex;
+    vertical-align: baseline;
 }
 
-nav li:first-child {
+nav li:nth-child(2) {
     margin-right: auto;
+}
+
+nav ul li span { 
+    color: #060922;
+    vertical-align: baseline;
 }
 
 nav a {
@@ -45,7 +51,7 @@ nav a {
 }
 
 nav ul img {
-    vertical-align: bottom;
+    vertical-align: baseline;
     width: 1.4em;
 }
 
@@ -57,12 +63,11 @@ nav ul img {
 
 img {
     width: 20em;
-    display: flex;
-    float: left;
+    display: block;
     margin: 0.5em;
 }
 img:hover{
-    transform: scale(1.4);
+    transform: scale(1.2);
 }
 h1 {
     color: #fff;
@@ -76,7 +81,7 @@ h1 {
 
 
 article{
-    max-width: 40em;
+    max-width: 30em;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -93,8 +98,8 @@ fieldset {
     font-family: 'NS-sans', Segoe UI, Myriad, Verdana, sans-serif;
     font-weight: 400;
     background-color: #ffc917;
-    position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     margin-bottom: 1em;
     border: none;
@@ -110,9 +115,7 @@ fieldset p {
     padding: .25em;
 }
 
-fieldset:invalid {
-    color: red;
-}
+fieldset:invalid {}
 
 fieldset:invalid p {
     display: none;
@@ -168,6 +171,7 @@ textarea::placeholder {
     cursor: pointer;
     box-shadow: inset 0 -3.125rem 0 #005ca0;
 }
+
 #socialbutton {
     height: 3rem;
     width: 3em;
@@ -264,6 +268,7 @@ textarea::placeholder {
     cursor: pointer;
     box-shadow: inset 0 -3.125rem 0 #005ca0;
 }
+
 i.fa.fa-angle-right {
     padding-left: 1.3em;
 }
@@ -281,7 +286,6 @@ section.socialmediaButton {
     padding: 1em;
     margin: 0.2em;
     max-width: 25em;
-
 }
 
 p {
@@ -562,7 +566,7 @@ footer {
         margin: 0 auto 0 auto;
     }
     fieldset {
-        max-width: 45em;
+        width: 45em;
         margin: 0 auto 0 auto;
     }
 

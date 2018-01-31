@@ -3,7 +3,7 @@
     src: url("../fonts/nssans__-webfont.ttf");
 }
 
-* {
+html {
     box-sizing: border-box;
 }
 
@@ -50,23 +50,23 @@ p {
 }
 
 .card ul a img {
-    width:0.9em;
+    width: 0.9em;
     margin-top: 1em;
 }
 
-img#chat.chatIcon:active{
-   transform: rotate(0.2turn);
-    
-}
-.card ul a img:active {
-    transform: scale(2);
+
+.card ul li button:active {
+    transform: scale(1.5);
 }
 
+.card ul li button:focus {
+    color: lightgrey;
+}
 
 .card ul span {
     position: absolute;
     left: 50%;
-    top: 0;
+    margin-top: -0.7em;
     font-size: 0.625em;
     font-weight: 700;
     font-family: 'NS-Sans';
@@ -88,11 +88,9 @@ img#chat.chatIcon:active{
     padding-top: 10em;
 }
 
-
 .card,
 article header h3 {
-    margin-top: 0.625em;
-    
+    margin-top: 0.625em;    
 }
 
 .card .wrapper {
@@ -105,14 +103,119 @@ article header h3 {
 
 .card .wrapper:hover ul span {
     transform: translate(-50%, -10px);
-    opacity: 1;
-    
+    opacity: 1; 
+} 
+
+li button.likeIcon {
+    background-image: url("../images/heart.svg");
+    background-size: 1.5em;
+    border: none;
+    cursor: pointer;
+    width: 1.5em;
+    height: 1.5em;
+    background-repeat: no-repeat;
+    background-position: center;
 }
+
+li button.liked {
+    background-image: url("../images/heartfull.svg");
+    background-size: 1.5em;
+    width: 1.5em;
+    height: 1.5em;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 2s;
+animation: fadeIn 1.5s;
+
+}
+
+li button {
+    width: 1.5em;
+    height: 1.5em;
+    background-color: transparent;
+    background-size: 1.5em;
+    padding-top:0.5em;
+    cursor: pointer;
+}
+
+
+li button.chatIcon {
+    background-image: url("../images/chat.svg");
+    background-size: 1.5em;
+    border: none;
+    cursor: pointer;
+    width: 1.5em;
+    height: 1.5em;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+li button.commented {
+background: url("../images/chatfull.svg");
+    cursor: pointer;
+    background-size: 1.5em;
+    width: 1.5em;
+    height: 1.5em;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 2s;
+     animation: zoomIn 1s;
+    animation: pulse 0.2s;
+}
+
+
+li button.downloadicon{
+    background-image: url("../images/download.svg");
+    background-size: 1.5em;
+    border: none;
+    cursor: pointer;
+    width: 1.5em;
+    height: 1.5em;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: pulse 0.2s;
+}
+
+li button.downloaded{
+    background: url("../images/check.svg");
+    cursor: pointer;
+    background-size: 1.5em;
+    width: 1.5em;
+    height: 1.5em;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 2s;
+    animation: rotateOut 1s;
+   
+}
+
+.menuDownloadicon {
+  background: url("../images/menuDownload.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    width: 3.5em;
+    height: 2.5em;
+    vertical-align: baseline;
+}
+
+.menuDownload{
+  background: url("../images/menuDownloadcheck.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    width: 3.5em;
+    height: 2.5em;
+    vertical-align: baseline;
+    transition: 1s;
+}
+ul li span.score:active{
+    transform: scale(1.4);
+} 
 
 .card .header {
     color: #fff;
     padding: 1em;
-    
 }
 
 .card .header::before,
@@ -135,13 +238,18 @@ article header h3 {
 }
 
 .card ul li {
-    margin: 0 0.313em;
+    margin: 0 0.3em 0 ;
     position: relative;
+    align-items: baseline;
 }
 
+.card ul li button{
+
+}
 .card ul span {
     transition: all 0.3s;
     opacity: 0;
+    margin-bottom: 0.7em;
 }
 
 .card .animation {
@@ -167,8 +275,6 @@ article header h3 {
     font-weight: 700;
 }
 
-/* Micro interaction fa fa-heart*/
-
 
 /* Achtergrond cards*/
 .card .item-1 {
@@ -185,4 +291,55 @@ article header h3 {
 
 .card .item-4 {
     background: url(../images/card-achtergrond.png) center/cover no-repeat;
+}
+
+@keyframes rotateOut {
+  from {
+    transform-origin: center;
+    opacity: 1;
+  }
+
+  to {
+    transform-origin: center;
+    transform: rotate3d(0, 0, 1, 200deg);
+    opacity: 0;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+    
+}
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(250,250,250,0.5);
+    box-shadow: 0 0 0 0 rgba(250,250,250,0.5);
+    border-radius: 50%;
+  }
+  25% {
+      -moz-box-shadow: 0 0 0 0.8em rgba(250,250,250,0.5);
+      box-shadow: 0 0 0 0.8em rgba(250,250,250,0.5);
+      border-radius: 50%;
+    }
 }

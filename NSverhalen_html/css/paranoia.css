@@ -9,7 +9,7 @@ html {
 }
 
 body {
-   font-family: 'Bungee', cursive;
+   font-family: 'NS-sans', sans-serif;
     font-size: 1em;
     line-height: 1.5625rem;
     color: #fff;
@@ -26,6 +26,7 @@ img.titel{
 }
 
 p {
+    font-family: 'Oxygen', sans-serif;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -40,6 +41,7 @@ i.fa.fa-arrow-down{
     color: black;
     display: flex;
 }
+
 
 
 /* opmaak menubalkje */
@@ -57,10 +59,16 @@ nav li {
     margin: 0.3em 0.5em;
     padding: 0;
     display: flex;
+    vertical-align: baseline;
 }
 
-nav li:first-child {
+nav li:nth-child(2) {
     margin-right: auto;
+}
+
+nav ul li span { 
+    color: #060922;
+    vertical-align: baseline;
 }
 
 nav a {
@@ -68,13 +76,14 @@ nav a {
 }
 
 nav ul img {
-    vertical-align: bottom;
+    vertical-align: baseline;
     width: 1.4em;
 }
 
 .nslogo {
     width: 3em;
 }
+
 
 /* in verhaal*/
 
@@ -361,14 +370,14 @@ max-width: 100%;
 @media all and (min-width: 70em) {
 
     main {
+        
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 10%;
-        grid-column-gap: 0.5em;
-        grid-row-gap: 0.7rem;
-        transition: 0.7s;
-        max-width: 1025px;
-        margin: 0 auto 0 auto;
+        grid-column-gap: 0.5rem;
+        grid-row-gap: 0.5rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 20%;
+        margin: auto;
+        max-width: 64em;
     }
     fieldset {
         margin: 0 auto 0 auto;
